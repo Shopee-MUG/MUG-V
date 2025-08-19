@@ -1,5 +1,5 @@
 # MUG-V
-MUG-V is a powerful image-to-video (I2V) model based on the DIT architecture, supporting fast generation of 720p high-quality video.
+MUG-V is a powerful video generation model based on the DIT architecture, supporting fast generation of 720p high-quality video.
 
 # Demo
 <video src='https://github.com/user-attachments/assets/ebbd3858-4bf0-4e98-b967-a870cc1585a5'></video>
