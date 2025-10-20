@@ -306,7 +306,7 @@ If you find our work helpful, please cite us.
 
 ## 📄 License
 
-This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the Apache License 2.0 - see the [LICENSE](https://github.com/Shopee-MUG/MUG-V/blob/main/LICENSE) file for details.
 
 **Note**: This is a research project. Generated content may not always be perfect. Please use responsibly and in accordance with applicable laws and regulations.
 
