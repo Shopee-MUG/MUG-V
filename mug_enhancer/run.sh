@@ -1,0 +1,14 @@
+python predict.py \
+  --task predict \
+  --output_path ./video_outputs \
+  --num_frames 105 \
+  --height 1280 \
+  --width 720 \
+  --fps=20 \
+  --dit_path "../pretrained_ckpt/MUG-V-inference/enhancer/dit_i2v.safetensors" \
+  --text_encoder_path "../pretrained_ckpt/Wan2.1-T2V-1.3B/models_t5_umt5-xxl-enc-bf16.pth" \
+  --vae_path "../pretrained_ckpt/Wan2.1-T2V-1.3B/Wan2.1_VAE.pth" \
+  --cond_path "../pretrained_ckpt/MUG-V-inference/enhancer/pytorch_model.bin" \
+  --video_path "../outputs/" \
+  --val_dataset_path "../assets/sample.csv" \
+  --lora_rank 256

@@ -1,0 +1,55 @@
+# MUG-DiT-10B - Requirements
+# Core dependencies for the MUG-DiT-10B video generation pipeline
+# Compatible with Python 3.8+
+
+# PyTorch and related packages
+--extra-index-url https://download.pytorch.org/whl/cu121
+torch==2.4.1
+torchvision==0.19.1
+torchaudio==2.4.1
+torchmetrics==1.6.2
+lightning==2.5.0.post0
+
+# Attention mechanisms and optimizations
+xformers==0.0.28.post1
+
+# Video processing
+av==13.1.0
+
+# NLP and text processing
+transformers==4.46.2
+sentencepiece>=0.1.99
+protobuf>=3.20.0
+
+# Diffusion models
+diffusers==0.29.0
+
+# Acceleration and optimization
+accelerate==1.6.0
+
+# Scientific computing
+numpy>=1.21.0
+scipy>=1.7.0
+
+# Image processing
+Pillow>=8.3.0
+
+# Array operations
+einops>=0.6.0
+
+# Progress bars
+tqdm>=4.62.0
+
+# Additional dependencies
+pandas
+peft
+safetensors
+diffsynth==1.1.2
+
+# Development dependencies (optional)
+# Uncomment for development work
+# black>=22.0.0
+# isort>=5.10.0
+# flake8>=4.0.0
+# mypy>=0.950
+# pytest>=7.0.0
