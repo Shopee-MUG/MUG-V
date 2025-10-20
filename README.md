@@ -11,10 +11,10 @@ LLM Team, Shopee Pte. Ltd.
 \* Equal contribution · † Corresponding authors
 
 [![arXiv](https://img.shields.io/badge/arXiv-Paper-red)](#)
-[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue)]()
-[![Inference Code](https://img.shields.io/badge/Code-Inference-yellow)](#) 
-[![Training Code](https://img.shields.io/badge/Code-Training-green)](#)
-[![License](https://img.shields.io/badge/License-Apache%202.0-orange.svg)](../../LICENSE)
+[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue)](https://huggingface.co/MUG-V/MUG-V-inference)
+[![Inference Code](https://img.shields.io/badge/Code-Inference-yellow)](https://github.com/Shopee-MUG/MUG-V) 
+[![Training Code](https://img.shields.io/badge/Code-Training-green)](https://github.com/Shopee-MUG/MUG-V-Megatron-LM-Training)
+[![License](https://img.shields.io/badge/License-Apache%202.0-orange.svg)](https://github.com/Shopee-MUG/MUG-V/blob/main/LICENSE)
 
 </div>
 
@@ -22,9 +22,9 @@ LLM Team, Shopee Pte. Ltd.
 ## Overview
 
 **MUG-V 10B** is a large-scale video generation system built by the **Shopee Multimodal Understanding and Generation (MUG) team**. The core generator is a Diffusion Transformer (DiT) with ~10B parameters trained via flow-matching objectives. We release the complete stack:
-- **Model weights** (links TBD)  
-- **Megatron-Core-based training code** (links TBD)  
-- **Inference pipelines** for **video generation** and **video enhancement** (links TBD)
+- [**Model weights**](https://huggingface.co/MUG-V/MUG-V-inference)
+- [**Megatron-Core-based training code**](https://github.com/Shopee-MUG/MUG-V-Megatron-LM-Training)
+- [**Inference pipelines**](https://github.com/Shopee-MUG/MUG-V) for **video generation** and **video enhancement**
 
 To our knowledge, this is the first publicly available large-scale video-generation training framework that leverages **Megatron-Core** for high training efficiency (e.g., high GPU utilization, strong MFU) and near-linear multi-node scaling. By open-sourcing the end-to-end framework, we aim to accelerate progress and lower the barrier for scalable modeling of the visual world.
 
@@ -32,9 +32,9 @@ To our knowledge, this is the first publicly available large-scale video-generat
 ## 🔥 Latest News
 
 * Otc 21, 2025: 👋 We are excited to announce the release of the **MUG-V 10B** [technical report](#). We welcome feedback and discussions.
-* Otc 21, 2025: 👋 We've released Megatron-LM–based [training framework](#) addressing the key challenges of training billion-parameter video generators.
-* Otc 21, 2025: 👋 We've released **MUG-V video enhancement** [inference code](#) and [weights](#) (based on WAN-2.1 1.3B). 
-* Otc 21, 2025: 👋 We've released **MUG-V 10B** ([e-commerce edition](#)) inference code and weights.  
+* Otc 21, 2025: 👋 We've released Megatron-LM–based [training framework](https://github.com/Shopee-MUG/MUG-V-Megatron-LM-Training) addressing the key challenges of training billion-parameter video generators.
+* Otc 21, 2025: 👋 We've released **MUG-V video enhancement** [inference code](https://github.com/Shopee-MUG/MUG-V/tree/main/mug_enhancer) and [weights](https://huggingface.co/MUG-V/MUG-V-inference) (based on WAN-2.1 1.3B). 
+* Otc 21, 2025: 👋 We've released **MUG-V 10B** ([e-commerce edition](https://github.com/Shopee-MUG/MUG-V)) inference code and weights.  
 * Apr 25, 2025: 👋 We submitted our model to [Vbench-I2V leaderboard](https://huggingface.co/spaces/Vchitect/VBench_Leaderboard), at submission time, MUG-V ranked **#3**.   
 
 
@@ -45,9 +45,10 @@ To our knowledge, this is the first publicly available large-scale video-generat
     - [x] Checkpoints: e-commerce edition (Image-to-Video Generation, I2V)
     - [ ] Checkpoints: general-domain edition
     - [ ] Diffusers integration
+    - [ ] Text prompt rewriter
 - **MUG-V Training**
     - [x] Data preprocessing tools (video encoding, text encoding)
-    - [x] [Pre-training framework](#) on Megatron-LM
+    - [x] Pre-training framework on Megatron-LM
 - **MUG-V Video Enhancer**
     - [x] Inference code
     - [x] Light-weight I2V model Checkpoints (trained on WAN-2.1 1.3B T2V model)
@@ -206,13 +207,14 @@ Generate a video from text and reference image.
 
 MUGDiT adopts the latent diffusion transformer paradigm with rectified flow matching objectives:
 
+
 ```mermaid
     flowchart TB
     A[Input Video] --> B[VideoVAE Encoder]
-    B --> C["Latent\n8×8×8 compression"]
+    B --> C["Latent 8×8×8 compression"]
 
-    C --> D["3D Patch Embedding\n2×2×2"]
-    D --> E["MUGDiT Blocks\n56 layers"]
+    C --> D["3D Patch 2x2x2 Embedding"]
+    D --> E["MUGDiT Blocks x 56"]
 
     F[Text] --> G[Caption Encoder]
     G --> E
