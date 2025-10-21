@@ -31,10 +31,10 @@ To our knowledge, this is the first publicly available large-scale video-generat
 
 ## 🔥 Latest News
 
-* Otc 21, 2025: 👋 We are excited to announce the release of the **MUG-V 10B** [technical report](#). We welcome feedback and discussions.
-* Otc 21, 2025: 👋 We've released Megatron-LM–based [training framework](https://github.com/Shopee-MUG/MUG-V-Megatron-LM-Training) addressing the key challenges of training billion-parameter video generators.
-* Otc 21, 2025: 👋 We've released **MUG-V video enhancement** [inference code](https://github.com/Shopee-MUG/MUG-V/tree/main/mug_enhancer) and [weights](https://huggingface.co/MUG-V/MUG-V-inference) (based on WAN-2.1 1.3B). 
-* Otc 21, 2025: 👋 We've released **MUG-V 10B** ([e-commerce edition](https://github.com/Shopee-MUG/MUG-V)) inference code and weights.  
+<!-- * Oct. 21, 2025: 👋 We are excited to announce the release of the **MUG-V 10B** [technical report](#). We welcome feedback and discussions. -->
+* Oct. 21, 2025: 👋 We've released Megatron-LM–based [training framework](https://github.com/Shopee-MUG/MUG-V-Megatron-LM-Training) addressing the key challenges of training billion-parameter video generators.
+* Oct. 21, 2025: 👋 We've released **MUG-V video enhancement** [inference code](https://github.com/Shopee-MUG/MUG-V/tree/main/mug_enhancer) and [weights](https://huggingface.co/MUG-V/MUG-V-inference) (based on WAN-2.1 1.3B). 
+* Oct. 21, 2025: 👋 We've released **MUG-V 10B** ([e-commerce edition](https://github.com/Shopee-MUG/MUG-V)) inference code and weights.  
 * Apr 25, 2025: 👋 We submitted our model to [Vbench-I2V leaderboard](https://huggingface.co/spaces/Vchitect/VBench_Leaderboard), at submission time, MUG-V ranked **#3**.   
 
 
