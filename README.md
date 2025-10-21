@@ -299,7 +299,7 @@ If you find our work helpful, please cite us.
 @article{mug-v2025,
       title={MUG-V 10B: High-efficiency Training Pipeline for Large Video Generation Models}, 
       author={Yongshun Zhang and Zhongyi Fan and Yonghang Zhang and Zhangzikang Li and Weifeng Chen and Zhongwei Feng and Chaoyue Wang and Peng Hou and Anxiang Zeng},
-      journal = {arXiv preprint},
+      journal = {arXiv preprint arXiv:2510.17519},
       year={2025}
 }
 ```
